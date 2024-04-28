@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
-    --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
-    --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
-    --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
-    --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
-    --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
-    --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
-    --Main-font:"Nunito Sans",sans-serif;
+  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
+  --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
+  --Main-font: "Nunito Sans", sans-serif;
 }
 
 *,
 html,
 body {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    --body-background:var(--Very-Light-Gray-Light-Mode-Background);
+  --body-background: var(--Very-Light-Gray-Light-Mode-Background);
+    color-scheme: light;
+    background-color:var(--body-background);
 }
 
 .header {
@@ -65,7 +67,7 @@ body {
 }
 
 .theme-switcher__moon-icon {
-    font-size:1rem;
+    font-size:1rem; 
     align-self:flex-start;
 }
 
@@ -100,20 +102,29 @@ body {
 }
 
 .search-country__input {
-    color:var(--Dark-Gray-Light-Mode-Input);
+    --input-country-clr:var(--Dark-Gray-Light-Mode-Input);
+    color:var(--input-country-clr);
     padding:0.4rem;
     flex-grow:1;
     border:none;
+    background-color:transparent;
 }
 
 .search-country__input::placeholder {
-    color:var(--Dark-Gray-Light-Mode-Input);
+    --input-country-placeholder-clr:var(--Dark-Gray-Light-Mode-Input);
+    color:var(--input-country-placeholder-clr);
+}
+
+.country-filter-region {
+    width:max-content;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
 }
 
 .country-filter-region__button {
     --filter-btn-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
     --filter-btn-clr:var(--Very-Dark-Blue-Light-Mode-Text);
-    min-width:50%;
     padding:1rem; 
     color:var(--filter-btn-clr);
     font-family:var(--Main-font);
@@ -127,6 +138,69 @@ body {
     box-shadow:0px 0px 5px 1px rgba(85, 85, 85, 0.216);
 }
 
+.country-filter-region__button__current-item {
+    margin-inline-end:2rem;
+}
+
 .country-filter-region__button__down-icon {
     font-size:0.8rem;
+}
+
+.region-list {
+    --region-list-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+    --region-list-clr:var(--Very-Dark-Blue-Light-Mode-Text); 
+    padding:1rem;
+    color:var(--region-list-clr);
+    /* display:flex; */
+    flex-direction:column;
+    align-items:flex-start;
+    align-self:stretch;
+    list-style-type:none;
+    background-color:var(--region-list-bg);
+    box-shadow:0px 0px 5px 1px rgba(85, 85, 85, 0.216);
+    gap:1rem;
+}
+
+.region-list__option {
+    font-size:0.875rem;
+    font-family: var(--Main-font);
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.region-list__option__radio {
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+/* @media (prefers-color-scheme:dark){
+    body {
+        --body-background:var(--Very-Dark-Blue-Dark-Mode-Background);
+
+        color-scheme:dark;
+    }    
+    .header {
+        --header-bg:var(--Dark-Blue-Dark-Mode-Elements);
+        --title-txt-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+
+        box-shadow:none;
+    } 
+    .search-country {
+        --search-bar-bg:var(--Dark-Blue-Dark-Mode-Elements);
+
+        box-shadow:none;        
+    }
+    .search-country__label {
+        --label-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+    }
+    .search-country__input {
+        --input-country-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+    }
+    .search-country__input::placeholder {
+        --input-country-placeholder-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+    }
+    .country-filter-region__button {
+        --filter-btn-bg:var(--Dark-Blue-Dark-Mode-Elements);
+        --filter-btn-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+    }
 }
