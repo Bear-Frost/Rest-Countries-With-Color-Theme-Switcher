@@ -30,28 +30,32 @@
                 <input type="search" id="search-bar-country" autocomplete="country-name" placeholder="Search for a country..." class="search-country__input">
             </div>
 
-            <div class="country-filter-region">
+            <div class="country-filter-region" role="combobox" aria-expanded="false" aria-owns="region-options" aria-controls="region-options"> 
                 <button class="country-filter-region__button">
                     <span class="country-filter-region__button__current-item">Filter by Region</span>
                     <i class="fa-solid fa-angle-down country-filter-region__button__down-icon"></i>
                 </button>
-
-                <ul hidden>
-                   <li>
-                    <button>Africa</button>
-                </li>
-                   <li>
-                    <button>America</button>
-                </li>
-                   <li>
-                    <button>Asia</button>
-                </li>
-                   <li>
-                    <button>Europe</button>
-                </li>
-                   <li>
-                    <button>Oceania</button>
-                </li>
+                <ul id="region-options" role="listbox" tabindex="-1" class="region-list" hidden>
+                    <li role="option" aria-selected="false" class="region-list__option">
+                        <input type="radio" name="region-name" id="africa" class="region-list__option__radio">
+                        <label for="africa">africa</label>
+                    </li>
+                    <li role="option" aria-selected="false" class="region-list__option">
+                        <input type="radio" name="region-name" id="america" class="region-list__option__radio">
+                        <label for="america">america</label>
+                    </li>
+                    <li role="option" aria-selected="false" class="region-list__option">
+                        <input type="radio" name="region-name" id="asia" class="region-list__option__radio">
+                        <label for="asia">asia</label>
+                    </li>
+                    <li role="option" aria-selected="false" class="region-list__option">
+                        <input type="radio" name="region-name" id="europe" class="region-list__option__radio">
+                        <label for="europe">europe</label>
+                    </li>
+                    <li role="option" aria-selected="false" class="region-list__option">
+                        <input type="radio" name="region-name" id="oceania" class="region-list__option__radio">
+                        <label for="oceania">oceania</label>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -59,6 +63,6 @@
         <section>
 
         </section>
-    </main>
+    </main>     
 </body>
 </html>
