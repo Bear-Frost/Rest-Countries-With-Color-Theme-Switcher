@@ -85,7 +85,9 @@ body {
 
 .search-country {
     --search-bar-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
+
     padding:0.8rem 2rem;
+    min-width:15.625rem;
     display:flex;
     align-items:center;
     font-family:var(--Main-font);
@@ -117,9 +119,7 @@ body {
 
 .country-filter-region {
     width:max-content;
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
+    position:relative;
 }
 
 .country-filter-region__button {
@@ -149,6 +149,7 @@ body {
 .region-list {
     --region-list-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
     --region-list-clr:var(--Very-Dark-Blue-Light-Mode-Text); 
+    min-width:100%;
     padding:1rem;
     color:var(--region-list-clr);
     /* display:flex; */
@@ -158,6 +159,8 @@ body {
     list-style-type:none;
     background-color:var(--region-list-bg);
     box-shadow:0px 0px 5px 1px rgba(85, 85, 85, 0.216);
+    position:absolute;
+    top:110%;
     gap:1rem;
 }
 
