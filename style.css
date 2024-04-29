@@ -8,6 +8,9 @@
   --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
   --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
   --Main-font: "Nunito Sans", sans-serif;
+  --Element-bg:var(--Very-Light-Gray-Light-Mode-Background);
+  --Element-text-clr:var(--Very-Dark-Blue-Dark-Mode-Background);
+  --Element-text-clr-gray:var(--Dark-Gray-Light-Mode-Input);
 }
 
 *,
@@ -25,15 +28,12 @@ body {
 }
 
 .header {
-    --header-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    --title-txt-clr:var(--Very-Dark-Blue-Light-Mode-Text);
-    
-    color:var(--title-txt-clr);
+    color:var(--Element-text-clr);
     padding:2rem 1rem;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background-color:var(--header-bg); 
+    background-color:var(--Element-bg); 
     box-shadow:0px 1px 10px 0px rgba(85, 85, 85, 0.216);
 }
 
@@ -84,8 +84,6 @@ body {
 }
 
 .search-country {
-    --search-bar-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-
     padding:0.8rem 2rem;
     min-width:15.625rem;
     display:flex;
@@ -93,19 +91,17 @@ body {
     font-family:var(--Main-font);
     font-size:0.875rem;
     border-radius:2px;
-    background-color:var(--search-bar-bg);
+    background-color:var(--Element-bg);
     box-shadow:0px 0px 10px 1px rgba(85, 85, 85, 0.216);
     gap:1rem;
 }
 
-.search-country__label {
-    --label-clr:var(--Dark-Gray-Light-Mode-Input);
-    color:var(--label-clr);
+.search-country__label { 
+    color:var(--Element-text-clr-gray);
 }
 
 .search-country__input {
-    --input-country-clr:var(--Dark-Gray-Light-Mode-Input);
-    color:var(--input-country-clr);
+    color:var(--Element-text-clr-gray);
     padding:0.4rem;
     flex-grow:1;
     border:none;
@@ -123,10 +119,8 @@ body {
 }
 
 .country-filter-region__button {
-    --filter-btn-bg:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    --filter-btn-clr:var(--Very-Dark-Blue-Light-Mode-Text);
     padding:1rem; 
-    color:var(--filter-btn-clr);
+    color:var(--Element-text-clr);
     font-family:var(--Main-font);
     font-weight:600;
     font-size:0.875rem;
@@ -134,7 +128,7 @@ body {
     justify-content:space-between;
     align-items:center;
     border:none; 
-    background-color:var(--filter-btn-bg);
+    background-color:var(--Element-bg);
     box-shadow:0px 0px 5px 1px rgba(85, 85, 85, 0.216);
 }
 
@@ -187,7 +181,6 @@ body {
 /* @media (prefers-color-scheme:dark){
     body {
         --body-background:var(--Very-Dark-Blue-Dark-Mode-Background);
-
         color-scheme:dark;
     }    
     .header {
