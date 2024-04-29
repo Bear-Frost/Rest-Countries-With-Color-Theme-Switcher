@@ -51,7 +51,7 @@ body {
     border-radius:1px;
 }
 
-.header__theme-switcher:has(.theme-switcher__toggler:focus){
+.header__theme-switcher:has(.theme-switcher__toggler:focus-visible){
     --outline-clr:var(--Very-Dark-Blue-Light-Mode-Text);
     outline:2px solid ;
 }
