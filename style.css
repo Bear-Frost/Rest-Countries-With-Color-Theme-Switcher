@@ -176,6 +176,14 @@ body {
     appearance:none;
 }
 
+@media screen and (min-width:81.25rem) {
+    .main__header {
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between; 
+    }
+}
+
 /* @media (prefers-color-scheme:dark){
     body {
         --body-background:var(--Very-Dark-Blue-Dark-Mode-Background);
@@ -206,4 +214,4 @@ body {
         --filter-btn-bg:var(--Dark-Blue-Dark-Mode-Elements);
         --filter-btn-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
     }
-}
+} */
