@@ -168,6 +168,58 @@ body {
     appearance:none;
 }
 
+.main__countries {
+    padding:1rem 3rem;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    justify-items:center;    
+}
+
+.countries__info {
+    width:100%;
+    color:var(--Element-text-clr);
+    display:flex;
+    flex-direction:column;
+    border-radius:10px;
+    border-radius:10px;
+    background-color:var(--Element-bg);
+}
+
+.countries__info__flag {
+    /* padding-bottom:; */
+    height:100%;
+    width:100%; 
+    object-fit:cover;
+    border-radius:10px 10px 0px 0px;
+}
+
+.countries__info__name {
+    color:var(--Element-text-clr);
+    padding:1rem;
+    font-family:var(--Main-font);
+    font-size:1rem;
+    font-weight:800;
+    text-align:start;
+    text-transform:capitalize;
+    border:none;
+    background-color: transparent;
+}
+
+.countries__info__stats { 
+    padding:1rem;
+    margin-bottom:2rem;
+    font-size:0.875rem;
+    font-family:var(--Main-font);
+    font-weight:500;
+    list-style-type:none;    
+    text-transform:capitalize;
+}
+
+.stats__value__name {
+    font-weight:700;
+}
+
 @media screen and (min-width:81.25rem) {
     .main__header {
         flex-direction:row;
