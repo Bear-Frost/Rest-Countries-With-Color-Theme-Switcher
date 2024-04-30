@@ -13,9 +13,9 @@
         <h1 class="header__app-title">Where in the world?</h1>
         
         <div class="header__theme-switcher">
-            <label for="theme-switcher" class="theme-switcher__label">
-                <i class="fa-regular fa-moon theme-switcher__moon-icon" id="moon-icon"></i>
-                dark mode
+            <label for="theme-switcher" class="theme-switcher__label" aria-label="toggle dark mode">
+                <i class="fa-regular fa-moon theme-switcher__moon-icon" id="moon-icon" aria-hidden="true"></i>
+                <span>dark mode</span>
             </label>
             <input type="checkbox" id="theme-switcher" class="theme-switcher__toggler">
         </div>
@@ -25,7 +25,7 @@
         <header class="main__header">
             <div class="search-country">
                 <label for="search-bar-country" class="search-country__label" aria-label="search country by name">
-                    <i class="fa-solid fa-magnifying-glass"></i>                    
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>                    
                 </label>
                 <input type="search" id="search-bar-country" autocomplete="country-name" placeholder="Search for a country..." class="search-country__input">
             </div>

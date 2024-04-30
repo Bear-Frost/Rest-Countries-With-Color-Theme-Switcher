@@ -73,8 +73,11 @@ body {
 }
 
 .theme-switcher__toggler {
-    -webkit-appearance: none;
-    appearance: none;
+    height:1px;
+    width:1px;
+    border:none;
+    overflow:hidden;
+    opacity:0;
 }
 
 .main__header {
