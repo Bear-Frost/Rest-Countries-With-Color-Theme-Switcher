@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded",() => {
             root.setProperty("--Element-text-clr","var(--White-Dark-Mode-Text-Light-Mode-Elements)");
             root.setProperty("--Element-text-clr-gray","var(--White-Dark-Mode-Text-Light-Mode-Elements)");  
             root.setProperty("--Body-bg","var(--Dark-Blue-Dark-Mode-Elements)");
+            document.getElementById("theme-switcher").checked = true;
             moonIcon.className = "fa-solid fa-moon theme-switcher__moon-icon";
         } 
 
@@ -17,6 +18,7 @@ window.addEventListener("DOMContentLoaded",() => {
             root.setProperty("--Element-text-clr",null);
             root.setProperty("--Element-text-clr-gray",null);
             root.setProperty("--Body-bg",null);
+            document.getElementById("theme-switcher").checked = false;
             moonIcon.className = "fa-regular fa-moon theme-switcher__moon-icon";
 
         }
