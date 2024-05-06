@@ -51,15 +51,10 @@ class CountryView {
     constructor(){
         this.countryListContainerElement = document.getElementById("country-list-element");
         this.searchBarInputElement = document.getElementById("search-bar-country");
-        this.filterByRegionButtonElement = document.getElementById("filter-by-region-btn");
-        this.filterRegionListElement = document.getElementById("region-options");
-        this.regionFilterChoices = document.querySelectorAll(".region-list__option__radio");
+        this.filterRegionSelectElement = document.getElementById("filter-region-select-element");
 
-        this.searchBarInputElement.addEventListener("input",() => this.searchCountry(this.searchBarInputElement.value));
-        this.filterByRegionButtonElement.addEventListener("click",() => this.showRegionFilterList());
-        this.regionFilterChoices.forEach(region => {
-            region.addEventListener("click",() => this.filterCountryByRegion(region.id));
-        })
+        this.searchBarInputElement.addEventListener("input",() => this.searchCountry(this.searchBarInputElement.value)); 
+        this.filterRegionSelectElement.addEventListener("change",(event) => this.filterCountryByRegion(event.target.value))
     }
 
     createCountriesIntroInfo(countryList){
@@ -69,7 +64,7 @@ class CountryView {
             const countryFlagFigureElement = this.createStyledElement("figure",{class:"countries__info__flag-figure"});
             const countryFlagFigureCaptionElement = this.createStyledElement("figcaption",{class:"countries__info__flag-figure__caption"});
             const countryFlagImageElement = this.createStyledElement("img",{class:"countries__info__flag",src:country.countryFlagImage,alt:country.countryFlagImageDescription,loading:"lazy",height:"150",width:"250"});
-            const countryNameElement = this.createStyledElement("button",{class:"countries__info__name","aria-label":`view more info about ${country.countryName}`});
+            const countryNameElement = this.createStyledElement("button",{class:"countries__info__name","aria-label":`view more info about the country ${country.countryName}`});
             const countryInfoStatElement = this.createStyledElement("ul",{class:"countries__info__stats"});
             const countryStatsListValueElements =  this.countryStatListValue(country);
 
@@ -145,17 +140,6 @@ class CountryView {
 
             this.searchCountry(this.searchBarInputElement.value);
         })
-    }
-
-    showRegionFilterList(){
-        if(this.filterByRegionButtonElement.dataset.state === "close"){
-            this.filterRegionListElement.hidden = false;
-            this.filterByRegionButtonElement.dataset.state = "open"
-        } 
-        else {
-            this.filterRegionListElement.hidden = true;
-            this.filterByRegionButtonElement.dataset.state = "close"
-        }
     }
 
     createStyledElement(elementName,elementAttributes = {}){
