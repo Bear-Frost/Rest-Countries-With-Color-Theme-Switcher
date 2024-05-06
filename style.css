@@ -242,12 +242,16 @@ body {
     font-weight:700;
 }
 
-@media screen and (min-width:81.25rem) {
+@media screen and (min-width:67.5rem) {
     .main__header {
         flex-direction:row;
         align-items:center;
         justify-content:space-between; 
     }
+
+    .countries__list {
+       grid-template-columns:repeat(4,1fr); 
+    }    
 }
 
 /* @media (prefers-color-scheme:dark){
