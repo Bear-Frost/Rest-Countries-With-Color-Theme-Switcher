@@ -363,34 +363,3 @@ body {
     gap: 0rem 1rem;
   }
 }
-
-/* @media (prefers-color-scheme:dark){
-    body {
-        --body-background:var(--Very-Dark-Blue-Dark-Mode-Background);
-        color-scheme:dark;
-    }    
-    .header {
-        --header-bg:var(--Dark-Blue-Dark-Mode-Elements);
-        --title-txt-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-
-        box-shadow:none;
-    } 
-    .search-country {
-        --search-bar-bg:var(--Dark-Blue-Dark-Mode-Elements);
-
-        box-shadow:none;        
-    }
-    .search-country__label {
-        --label-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    }
-    .search-country__input {
-        --input-country-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    }
-    .search-country__input::placeholder {
-        --input-country-placeholder-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    }
-    .country-filter-region__button {
-        --filter-btn-bg:var(--Dark-Blue-Dark-Mode-Elements);
-        --filter-btn-clr:var(--White-Dark-Mode-Text-Light-Mode-Elements);
-    }
-} */
