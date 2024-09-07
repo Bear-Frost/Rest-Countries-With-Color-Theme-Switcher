@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/project-screenshot.png)
+![](./src/assets/design/project-screenshot.png)
 
 ### Links
 
@@ -41,21 +41,22 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Javascript
-- Flexbox
-- CSS Grid
+- React 
+- Tailwind 
 - Mobile-first workflow
 
 ### What I learned
 
-I learned and practice about MVC pattern using javascript although i may not quite get it right or not strictly followed the MVC pattern i'm still glad that i am able to do it in some way, this project is suitable for it i learned a lot of new concept in JS while doing this project.
+After migrating this project from vanilla JavaScript to React, I gained valuable experience in using React, particularly with custom hooks. This migration provided me with hands-on experience in implementing various React hooks in a real-world project. The process was both challenging and enjoyable, allowing me to enhance my React skills significantly.
 
+Additionally, integrating Tailwind CSS into the project improved the overall design and development efficiency. The combination of React and Tailwind CSS made the project more maintainable and visually appealing.
+
+This migration was not only a technical upgrade but also an opportunity for personal growth as a developer. I'm excited to continue building on this foundation and applying what I've learned to future projects.
 ### Continued development
-My Focus now is how i can improve my implementation of MVC pattern on this project and to write a more readable and easy to understand code.
+
+I plan to continue making improvements to this project over time. I recognize that there is still room for enhancement in some of the code, and refining these aspects will be my primary focus moving forward. Continuous improvement is key, and I’m committed to iterating and optimizing the project as I progress.
 
 ## Author
 
-- Github - [i-Bex](https://github.com/i-Bex)
-- Frontend Mentor - [@ibex](https://www.frontendmentor.io/profile/i-Bex)
+- Github - [Frost](https://github.com/Bear-Frost )
+- Frontend Mentor - [@Frost](https://www.frontendmentor.io/profile/Bear-Frost)
