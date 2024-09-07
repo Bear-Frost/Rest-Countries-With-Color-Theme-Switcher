@@ -14,7 +14,7 @@ function getFilteredCountryList(
         : countryRegionValue === info.region
         ? true
         : false;
-    const isCountryNameMatch = info.name.substring(0, countryNameValue.length) === countryNameValue;
+    const isCountryNameMatch = info.name.substring(0, countryNameValue.length) === countryNameValue.toLowerCase();
     const isSearchedCountry = isCountryRegionMatch && isCountryNameMatch;
 
     return isSearchedCountry ? true : false;
