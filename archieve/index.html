@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/052033c193.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rest Countries With Color Theme Switcher</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__app-title">Where in the world?</h1>
+
+      <div class="header__theme-switcher">
+        <label
+          for="theme-switcher"
+          class="theme-switcher__label"
+          aria-label="toggle dark mode"
+        >
+          <i
+            class="fa-regular fa-moon theme-switcher__moon-icon"
+            id="moon-icon"
+            aria-hidden="true"
+          ></i>
+          <span>dark mode</span>
+        </label>
+        <input
+          type="checkbox"
+          id="theme-switcher"
+          class="theme-switcher__toggler"
+        />
+      </div>
+    </header>
+
+    <main class="main">
+      <header class="main__header" id="main-header-element">
+        <div class="search-country">
+          <label for="search-bar-country" class="search-country__label">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </label>
+          <input
+            type="search"
+            id="search-bar-country"
+            autocomplete="country"
+            placeholder="Search for a country..."
+            class="search-country__input"
+          />
+        </div>
+
+        <select
+          aria-label="region list"
+          class="filter-country-region"
+          id="filter-region-select-element"
+        >
+          <option disabled selected hidden>Filter by Region</option>
+          <option value="africa">Africa</option>
+          <option value="americas">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+          <option value="all-regions">All Region</option>
+        </select>
+      </header>
+
+      <section class="main__countries" id="country-list-container">
+        <ul class="countries__list" id="country-list-element"></ul>
+      </section>
+
+      <section
+        class="main__countries-info"
+        id="main-countries-info-element"
+        hidden
+      >
+        <button
+          type="button"
+          class="countries-info__back-btn"
+          id="back-info-list-btn"
+          aria-label="Back to Home Page"
+        >
+          <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i>
+          <span>Back</span>
+        </button>
+
+        <section class="main__countries-detailed-info">
+          <figure class="main__countries-deatailed-info__flag">
+            <img
+              src=""
+              alt=""
+              height="250"
+              width="250"
+              lazy="loading"
+              class="detailed-info-flag"
+              id="detailed-country-info-flag"
+            />
+            <figcaption
+              id="detailed-country-info-flag-caption"
+              hidden
+            ></figcaption>
+          </figure>
+
+          <div class="main__countries-detailed-info__list">
+            <h2
+              class="countries-detailed-info__list__name"
+              id="detailed-country-info-name"
+            ></h2>
+
+            <div class="detailed-info__list__item">
+              <dl
+                class="list__item__info"
+                id="detailed-country-info-list-initial"
+              ></dl>
+
+              <dl
+                class="list__item__info"
+                id="detailed-country-info-list-secondary"
+              ></dl>
+            </div>
+
+            <dl class="countries-detailed-info__list__borders">
+              <div class="info__list__borders__container">
+                <dt class="borders__container__value">Border Countries:</dt>
+                <dl
+                  class="borders__container__info"
+                  id="detailed-country-info-borders"
+                ></dl>
+              </div>
+            </dl>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
