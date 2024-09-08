@@ -28,7 +28,7 @@ function CountryDetails() {
         <section className="flex flex-col gap-y-8 lg:flex-row lg:gap-x-[5rem] lg:items-center">
           <img src={details.flag} alt={details.flagAlt} className="lg:max-w-[35rem] lg:max-h-[25rem] lg:shadow-md"/>
           <div className="lg:flex lg:flex-col lg:gap-8 lg:p-8 lg:flex-1">
-            <p className="font-extrabold text-xl capitalize">{details.name}</p>
+            <p className="font-extrabold text-xl capitalize mt-8 lg:mt-0">{details.name}</p>
 
             <div className="flex flex-col gap-y-8 lg:flex-row lg:justify-between lg:flex-wrap lg:gap-x-[5rem]">
               <ul className="flex flex-col gap-y-4">
