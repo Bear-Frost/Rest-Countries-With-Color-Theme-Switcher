@@ -25,8 +25,8 @@ function CountryFilterOption() {
 
   return (
     <div className="p-4 flex flex-col items-start gap-8 lg:flex-row lg:justify-between">
-      <SearchBar handleUpdateCountryRegion={onUpdateCountryRegionAndName} />
-      <SelectElement handleUpdateCountryRegion={onUpdateCountryRegionAndName} />
+      <SearchBar handleUpdateCountryRegion={onUpdateCountryRegionAndName} countryName={countryName}/>
+      <SelectElement handleUpdateCountryRegion={onUpdateCountryRegionAndName} regionName={regionName}/>
     </div>
   );
 }
