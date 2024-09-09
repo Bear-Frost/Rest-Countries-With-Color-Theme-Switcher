@@ -58,7 +58,7 @@ function CountryDetails() {
             </div>
 
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center mt-8">
-              <p className="font-extrabold text-base capitalize">
+              <p className="font-extrabold text-base capitalize text-nowrap">
                 border countries:
               </p>
               <div className="flex flex-wrap gap-x-2 gap-y-4">
